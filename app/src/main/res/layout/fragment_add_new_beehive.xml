@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="addNewBeehiveViewModel"
+            type="com.example.android.myapplication.addnewbeehive.AddNewBeehiveViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/beenamelayout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/beehive_name_hint"
+            app:counterEnabled="true"
+            app:helperText="Required*"
+            app:counterMaxLength="6"
+            app:startIconDrawable="@drawable/bee_name_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/beeyearlayout"
+            app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_beehive_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="7"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/beeyearlayout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/queenbee_year_hint"
+            app:helperText="Required*"
+            app:counterEnabled="true"
+            app:counterMaxLength="4"
+            app:startIconDrawable="@drawable/year"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/new_beehive_done"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/queenbee_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="5"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/new_beehive_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done_button"
+            android:onClick="@{() -> addNewBeehiveViewModel.clickDoneButton()}"
+            app:layout_constraintTop_toBottomOf="@id/beeyearlayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
