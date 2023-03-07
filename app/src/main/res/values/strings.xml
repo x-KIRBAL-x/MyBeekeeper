@@ -58,6 +58,10 @@
     <string name="nosema"><b>Nosema apis</b></string>
     <string name="swarm_queen_cells"><b>Swarm queen cells:</b></string>
     <string name="queenbee_warning"> \ \ \ \ \ \ \ \ \ The year isn\'t correct! \n (max. of 5 from the current year)</string>
+    <string name="hive_name_lenght_warrning">Hive\ name\ max\ 6\ character!</string>
+    <string name="group_name_lenght_warrning">Group\ name\ max\ lenght\ 10\ character!</string>
+    <string name="group_location_lenght_warrning">Location\ name\ max\ lenght\ 20\ character!</string>
+    <string name="empty_field_warrning">Please\ fill\ in\ all\ fields!</string>
     <string name="nosema_description">
         <b>Nosema apis</b> is a microsporidian, a small, unicellular parasite recently
         reclassified as a fungus that mainly affects honey bees. It causes <b>nosemosis</b>, also called <b>nosema</b>, which is
@@ -101,5 +105,6 @@
     <string name="brood_frame_info">description</string>
     <string name="honey_frame_info">description</string>
     <string name="swarming_bees_info">description</string>
+    
 
 </resources>
