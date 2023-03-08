@@ -21,9 +21,9 @@
 
         <ImageView
             android:id="@+id/group_img"
-            android:layout_width="64dp"
+            android:layout_width="115dp"
             android:layout_height="64dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:GroupImage="@{group}"
@@ -37,14 +37,15 @@
             android:layout_width="0dp"
             android:layout_height="26dp"
             android:textAlignment="center"
-            android:textSize="10dp"
+            android:textSize="@dimen/list_item_text_size"
+            android:textStyle="bold"
             app:GroupName="@{group}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/group_img"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/group_img"
             app:layout_constraintTop_toBottomOf="@+id/group_img"
-            tools:text="Group" />
+            tools:text="group" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

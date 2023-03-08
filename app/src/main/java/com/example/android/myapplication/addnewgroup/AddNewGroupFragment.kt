@@ -46,7 +46,7 @@ class AddNewGroupFragment : Fragment() {
                         if( binding.newGroupName.text.toString() != "" && binding.newGroupLocation.text.toString() != ""){
                             val groupNameLenght: Int = binding.newGroupName.text.toString().length
                             val groupLocationLenght: Int = binding.newGroupLocation.text.toString().length
-                            if (groupNameLenght<11) {
+                            if (groupNameLenght<12) {
                                 if (groupLocationLenght<21) {
                                     if (it == 1) {
                                         addNewGroupViewModel.setvalue(
@@ -86,10 +86,10 @@ class AddNewGroupFragment : Fragment() {
         })
 
         binding.newGroupName.doOnTextChanged { text, start, before, count ->
-            if (text!!.length > 10){
+            if (text!!.length > 11){
                 binding.beegroupnamelayout.error = "No More!"
             }
-            else if (text.length <= 10){
+            else if (text.length <= 11){
                 binding.beegroupnamelayout.error = null
             }
         }
