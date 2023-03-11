@@ -31,7 +31,7 @@ class AddNewBeehiveFragment : Fragment(){
         val arguments = AddNewBeehiveFragmentArgs.fromBundle(requireArguments())
 
         val dataSource = BeeDatabase.getInstance(application).beeDatabaseDao
-        val viewModelFactory = AddNewBeehiveViewModelFactory(arguments.beeGroupKey,arguments.beehiveKey,arguments.navi,dataSource)
+        val viewModelFactory = AddNewBeehiveViewModelFactory(arguments.beeGroupKey,arguments.beehiveKey,dataSource)
 
         val addNewBeehiveViewModel = ViewModelProvider(this, viewModelFactory).get(AddNewBeehiveViewModel::class.java)
 
@@ -44,22 +44,14 @@ class AddNewBeehiveFragment : Fragment(){
         addNewBeehiveViewModel.clickDoneButton.observe(this, Observer {
             if(it!=null){
                 if(binding.newBeehiveName.text.toString() != "" && binding.queenbeeAge.text.toString() != ""){
-                    val queenYear: Int = binding.queenbeeAge.text.toString().toInt()
-                    val maxLenght: Int = binding.newBeehiveName.text.toString().length
+                    var queenYear: Int = binding.queenbeeAge.text.toString().toInt()
+                    var maxLenght: Int = binding.newBeehiveName.text.toString().length
                     if (maxLenght<7){
                          if(queenYear>(SimpleDateFormat("yyyy").format(Date()).toString().toInt()-6)
                          && queenYear<=SimpleDateFormat("yyyy").format(Date()).toString().toInt()){
-                             if (it==1) {
                                  addNewBeehiveViewModel.setValue(binding.newBeehiveName.text.toString(),queenYear)
                                 this.findNavController().navigate(AddNewBeehiveFragmentDirections.actionAddNewBeehiveFragmentToBeehivesFragment(arguments.beeGroupKey))
                                 addNewBeehiveViewModel.donenavigating()
-                            }
-                             if(it==2){
-                                //Toast.makeText(context,"${arguments.beehiveKey} ${arguments.beeGroupKey}",Toast.LENGTH_SHORT).show()
-                                addNewBeehiveViewModel.setValue(binding.newBeehiveName.text.toString(),queenYear)
-                                this.findNavController().navigate(AddNewBeehiveFragmentDirections.actionAddNewBeehiveFragmentToBeehiveDetailFragment(arguments.beehiveKey,arguments.beeGroupKey))
-                                addNewBeehiveViewModel.donenavigating()
-                            }
                         }
                         else{
                             Toast.makeText(application, resources.getString(R.string.queenbee_warning),Toast.LENGTH_SHORT).show()

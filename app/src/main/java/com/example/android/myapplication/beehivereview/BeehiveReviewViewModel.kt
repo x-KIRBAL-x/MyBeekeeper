@@ -31,6 +31,7 @@ class BeehiveReviewViewModel(
         private val _editHoneyframeQuantity = MutableLiveData<Boolean?>()
         private val _navigateToNosemadescriptionFragment = MutableLiveData<Boolean?>()
         private val _navigateToAscosphaeraApisDescriptionFragment = MutableLiveData<Boolean?>()
+        private val _navigateToSwarnQuennCellsdescriptionFragment = MutableLiveData<Boolean?>()
 
     val navigateToPreviousFragment: LiveData<Int?>
         get() = _navigateToPreviousFragment
@@ -52,6 +53,9 @@ class BeehiveReviewViewModel(
 
     val navigateToAscosphaeraApisDescriptionFragment: LiveData<Boolean?>
         get() = _navigateToAscosphaeraApisDescriptionFragment
+
+    val navigateToSwarnQuennCellsdescriptionFragment: LiveData<Boolean?>
+        get() = _navigateToSwarnQuennCellsdescriptionFragment
 
 
     fun setBeequeenCondition(quality: Int){
@@ -149,6 +153,14 @@ class BeehiveReviewViewModel(
 
     fun clickOnAscosphaeraApisInfoButton(){
         _navigateToAscosphaeraApisDescriptionFragment.value=true
+    }
+
+    fun clickOnSwarnQuennCellInfoButton(){
+        _navigateToSwarnQuennCellsdescriptionFragment.value=true
+    }
+
+    fun doneNavigateToSwarnQuennCellsdescriptionFragment(){
+        _navigateToSwarnQuennCellsdescriptionFragment.value=null
     }
 
     fun doneNavigateToAscosphaeraApisDescriptionFragment(){

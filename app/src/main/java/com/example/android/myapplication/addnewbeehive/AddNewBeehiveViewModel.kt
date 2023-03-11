@@ -11,7 +11,6 @@ import kotlinx.coroutines.launch
 class AddNewBeehiveViewModel(
     private val beeGroupKey: Long,
     private val beehiveKey: Long,
-    private val navi: Long,
     dataSource: BeeDatabaseDao) : ViewModel() {
 
 
@@ -25,13 +24,13 @@ class AddNewBeehiveViewModel(
 
     fun getBeehive() = beehive
 
-    private val _clickDoneButton = MutableLiveData<Int?>()
+    private val _clickDoneButton = MutableLiveData<Boolean?>()
 
-    val clickDoneButton: LiveData<Int?>
+    val clickDoneButton: LiveData<Boolean?>
         get() = _clickDoneButton
 
     fun clickDoneButton(){
-        _clickDoneButton.value = navi.toInt()
+        _clickDoneButton.value = true
     }
 
     fun donenavigating(){
@@ -40,8 +39,8 @@ class AddNewBeehiveViewModel(
 
     fun setValue(name: String, queenyear: Int){
         viewModelScope.launch {
-            val newBeeHive = database.getBeeHive(beehiveKey)
-            val beegroup = database.getgroup(beeGroupKey)
+            var newBeeHive = database.getBeeHive(beehiveKey)
+            var beegroup = database.getgroup(beeGroupKey)
             newBeeHive.beehiveName = name
             newBeeHive.queenBeeYear = queenyear
             newBeeHive.groupId = beeGroupKey

@@ -62,11 +62,11 @@ class BeehiveDetailFragment : Fragment() {
             }
         })
 
-        beehiveDetailViewModel.navigateToAddNewBeehiveFragment.observe(this, Observer {
-            if (it!=null){
+        beehiveDetailViewModel.navigateToRenameBeehiveFragment.observe(this, Observer {
+            if (it==true){
                 //Toast.makeText(context,"${arguments.beehivekey} ${arguments.beeGroupKey}",Toast.LENGTH_SHORT).show()
-                this.findNavController().navigate(BeehiveDetailFragmentDirections.actionBeehiveDetailFragmentToAddNewBeehiveFragment(arguments.beeGroupKey, arguments.beehivekey,2))
-                beehiveDetailViewModel.doneNavigateToAddNewBeehiveFragment()
+               this.findNavController().navigate(BeehiveDetailFragmentDirections.actionBeehiveDetailFragmentToRenameBeehiveFragment(arguments.beehivekey, arguments.beeGroupKey))
+               beehiveDetailViewModel.doneNavigateToRenameBeehiveFragment()
             }
         })
         return binding.root

@@ -29,6 +29,8 @@
     <string name="beehive_name_hint"><b>Beehive name</b></string>
     <string name="queenbee_year_hint"><b>QueenBee year</b></string>
 
+    <string name="new_name_hint"><b>New name</b></string>
+
     <string name="delete_text"><b>Are You Sure?</b></string>
     <string name="yes_button"><b>Yes</b></string>
     <string name="no_button"><b>No</b></string>
@@ -105,6 +107,5 @@
     <string name="brood_frame_info">description</string>
     <string name="honey_frame_info">description</string>
     <string name="swarming_bees_info">description</string>
-    
-
+    <string name="swarm_queen_cells_info">description to swarm queen cells</string>
 </resources>

@@ -200,6 +200,13 @@ class BeehiveReviewFragment: Fragment() {
             }
         })
 
+        beehiveReviewViewModel.navigateToSwarnQuennCellsdescriptionFragment.observe(this, Observer {
+            if (it==true){
+                this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToSwarmQueenCellsDescriptionFragment())
+                beehiveReviewViewModel.doneNavigateToSwarnQuennCellsdescriptionFragment()
+            }
+        })
+
         return binding.root
     }
 }

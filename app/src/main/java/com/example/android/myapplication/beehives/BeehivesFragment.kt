@@ -60,7 +60,7 @@ class BeehivesFragment : Fragment() {
         beeHivesViewModel.navigateToAddNewBeehiveFragment.observe(this, Observer {
             beehive -> beehive?.let {
             //Toast.makeText(context,"${beehive.beehiveId} ${arguments.beeGroupKey}",Toast.LENGTH_SHORT).show()
-                this.findNavController().navigate(BeehivesFragmentDirections.actionBeehivesFragmentToAddNewBeehiveFragment(arguments.beeGroupKey,beehive.beehiveId,1))
+                this.findNavController().navigate(BeehivesFragmentDirections.actionBeehivesFragmentToAddNewBeehiveFragment(arguments.beeGroupKey,beehive.beehiveId))
             beeHivesViewModel.doneNavigateToAddNewBeehiveFragment()
         }
         })

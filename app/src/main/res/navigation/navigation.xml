@@ -152,9 +152,6 @@
         <argument
             android:name="beehiveKey"
             app:argType="long"/>
-        <argument
-            android:name="navi"
-            app:argType="long"/>
         <action
             android:id="@+id/action_addNewBeehiveFragment_to_beehivesFragment"
             app:destination="@id/beehivesFragment"
@@ -165,8 +162,20 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/beehivesFragment"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/renameBeehiveFragment"
+        android:name="com.example.android.myapplication.renamebeehive.RenameBeehiveFragment"
+        android:label="Rename Beehive"
+        tools:layout="@layout/fragment_rename_beehive">
+        <argument
+            android:name="beehivekey"
+            app:argType="long"/>
+        <argument
+            android:name="beeGroupKey"
+            app:argType="long"/>
         <action
-            android:id="@+id/action_addNewBeehiveFragment_to_beehiveDetailFragment"
+            android:id="@+id/action_renameBeehiveFragment_to_beehiveDetailFragment"
             app:destination="@id/beehiveDetailFragment"
             app:enterAnim="@anim/slide_in_down"
             app:launchSingleTop="true"
@@ -206,6 +215,11 @@
         <action
             android:id="@+id/action_beehiveDetailFragment_to_addNewBeehiveFragment"
             app:destination="@id/addNewBeehiveFragment"
+            app:enterAnim="@anim/slide_in_top"
+            app:popEnterAnim="@anim/slide_in_down" />
+        <action
+            android:id="@+id/action_beehiveDetailFragment_to_RenameBeehiveFragment"
+            app:destination="@id/renameBeehiveFragment"
             app:enterAnim="@anim/slide_in_top"
             app:popEnterAnim="@anim/slide_in_down" />
     </fragment>
@@ -313,19 +327,30 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popUpTo="@id/swarmingBees"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beehiveReviewFragment_to_swarmQueenCellsDescriptionFragment"
+            app:destination="@id/swarmQueenCellsDescriptionFragment"
+            app:popUpTo="@id/swarmQueenCellsDescriptionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/nosemaDescriptionFragment"
         android:name="com.example.android.myapplication.nosemadescription.NosemaDescriptionFragment"
         android:label="Nosema description"
-        tools:layout="@layout/fragment_nosema_info">
-    </fragment>
+        tools:layout="@layout/fragment_nosema_info"/>
     <fragment
         android:id="@+id/ascosphaeraApisDescriptionFragment"
         android:name="com.example.android.myapplication.ascosphaeraapisdescription.AscosphaeraApisDescriptionFragment"
         android:label="Ascosphaera a. description"
-        tools:layout="@layout/fragment_ascosphaera_apis_info">
-    </fragment>
+        tools:layout="@layout/fragment_ascosphaera_apis_info"/>
+    <fragment
+        android:id="@+id/swarmQueenCellsDescriptionFragment"
+        android:name="com.example.android.myapplication.swarmqueencellsdescription.SwarmQueenCellsDescription"
+        android:label="Swarm Quenn Cells Info"
+        tools:layout="@layout/fragment_swarm_queen_cells_info"/>
     <fragment
         android:id="@+id/selectGroupFragment"
         android:name="com.example.android.myapplication.selectgroup.SelectGroupFragment"
