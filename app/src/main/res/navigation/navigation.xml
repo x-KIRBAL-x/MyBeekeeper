@@ -270,7 +270,9 @@
             app:destination="@id/beehiveDetailFragment"
             app:enterAnim="@anim/slide_in_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popUpTo="@id/beehiveDetailFragment" />
+            app:popUpTo="@id/beehiveDetailFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
         <action
             android:id="@+id/action_beehiveReviewFragment_to_broodframeBalancing"
             app:destination="@id/broodframeBalancing"

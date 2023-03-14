@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -10,6 +11,7 @@
             name="clickListener"
             type="com.example.android.myapplication.selectgroup.SelectGroupListener" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,9 +19,9 @@
 
         <ImageView
             android:id="@+id/group_img"
-            android:layout_width="102dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="115dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,8 +42,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/group_img"
             app:layout_constraintTop_toBottomOf="@+id/group_img"
-            tools:text="Group"
-            app:SelectGroupName="@{group}"/>
+            app:SelectGroupName="@{group}"
+            tools:text="Group"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

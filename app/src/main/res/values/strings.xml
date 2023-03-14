@@ -108,4 +108,8 @@
     <string name="honey_frame_info">description</string>
     <string name="swarming_bees_info">description</string>
     <string name="swarm_queen_cells_info">description to swarm queen cells</string>
+    <string name="menu_text">Home</string>
+    <string name="bee_groups_text">Bee Groups</string>
+    <string name="bee_groups_management_text">Bee Groups Management</string>
+    <string name="info_text">Info</string>
 </resources>

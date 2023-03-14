@@ -120,12 +120,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="12dp"
+            android:background="@drawable/roundcorner"
             android:onClick="@{()->beehiveDetailViewModel.clickOnEditButton()}"
             android:src="@drawable/edit_icon"
-            android:backgroundTint="@color/orange_500"
+            app:layout_constraintBottom_toBottomOf="@id/beehive_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/beehive_name"
-            app:layout_constraintBottom_toBottomOf="@id/beehive_name"/>
+            app:layout_constraintTop_toTopOf="@id/beehive_name" />
 
         <Button
             android:id="@+id/beehive_delete"
