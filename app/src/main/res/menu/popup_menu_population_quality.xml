@@ -12,7 +12,7 @@
     <item
         android:id="@+id/popUpMenuQuality_Three"
         android:icon="@drawable/p_mid"
-        android:title="@string/three" />
+        android:title="@string/three"/>
     <item
         android:id="@+id/popUpMenuQuality_Four"
         android:icon="@drawable/p_good"

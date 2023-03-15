@@ -45,11 +45,6 @@ class RenameBeehiveFragment : Fragment(){
                 if(newName!="") {
                     if (textLenght<7) {
                         renameBeehiveViewModel.setNewName(newName)
-                        renameBeehiveViewModel.setNewName(newName)
-                        renameBeehiveViewModel.setNewName(newName)
-                        renameBeehiveViewModel.setNewName(newName)
-                        renameBeehiveViewModel.setNewName(newName)
-                        renameBeehiveViewModel.setNewName(newName)
                         Toast.makeText(application, "",Toast.LENGTH_SHORT).show()
                         this.findNavController().navigate(
                             RenameBeehiveFragmentDirections.actionRenameBeehiveFragmentToBeehiveDetailFragment(

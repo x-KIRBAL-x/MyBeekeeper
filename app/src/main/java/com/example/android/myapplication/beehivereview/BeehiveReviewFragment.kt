@@ -114,7 +114,7 @@ class BeehiveReviewFragment: Fragment() {
 
         beehiveReviewViewModel.editBeequeenCondition.observe(this, Observer {
             if(it==true){
-                var popupmenu: PopupMenu = PopupMenu(application,binding.queenbeeConditionEdit)
+                var popupmenu: PopupMenu = PopupMenu(context,binding.queenbeeConditionEdit)
                 popupmenu.inflate(R.menu.popup_menu_queenbee_quality)
                 popupmenu.show()
                 popupmenu.setForceShowIcon(true)
@@ -134,7 +134,7 @@ class BeehiveReviewFragment: Fragment() {
         })
        beehiveReviewViewModel.editBeehivePopulation.observe(this, Observer {
             if(it==true){
-                var popupmenu: PopupMenu = PopupMenu(application,binding.hivePopulationEdit)
+                val popupmenu: PopupMenu = PopupMenu(context,binding.hivePopulationEdit)
                 popupmenu.inflate(R.menu.popup_menu_population_quality)
                 popupmenu.show()
                 popupmenu.setForceShowIcon(true)
@@ -154,7 +154,7 @@ class BeehiveReviewFragment: Fragment() {
 
         beehiveReviewViewModel.editBroodframeQuantity.observe(this, Observer {
             if(it==true){
-                var popupmenu: PopupMenu = PopupMenu(application,binding.broodframeEdit)
+                var popupmenu: PopupMenu = PopupMenu(context,binding.broodframeEdit)
                 popupmenu.menuInflater.inflate(R.menu.popup_menu_button_quantity,popupmenu.menu)
                 popupmenu.show()
                 popupmenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
@@ -171,7 +171,7 @@ class BeehiveReviewFragment: Fragment() {
 
         beehiveReviewViewModel.editHoneyframeQuantity.observe(this, Observer {
             if(it==true){
-                var popupmenu: PopupMenu = PopupMenu(application,binding.honeyFrameEdit)
+                var popupmenu: PopupMenu = PopupMenu(context,binding.honeyFrameEdit)
                 popupmenu.menuInflater.inflate(R.menu.popup_menu_button_quantity,popupmenu.menu)
                 popupmenu.show()
                 popupmenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
