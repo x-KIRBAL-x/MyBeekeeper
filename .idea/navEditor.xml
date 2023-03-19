@@ -309,6 +309,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_beehiveReviewFragment_to_swarmQueenCellsDescriptionFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_beehiveReviewFragment_to_swarmingBees">
                               <value>
                                 <LayoutPositions />
