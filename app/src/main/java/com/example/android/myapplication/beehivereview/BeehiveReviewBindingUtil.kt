@@ -2,7 +2,6 @@ package com.example.android.myapplication.beehivereview
 
 import android.graphics.Typeface
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -10,7 +9,6 @@ import com.example.android.myapplication.R
 import com.example.android.myapplication.convertNumericQualityToString
 import com.example.android.myapplication.convertNumericQuantityToString
 import com.example.android.myapplication.database.Beehive
-import com.google.android.material.textfield.TextInputEditText
 
 @BindingAdapter("QueenbeeYearEdit")
 fun EditText.setQueenbeeYear(item: Beehive?){
@@ -83,14 +81,21 @@ fun TextView.setHoneyframeNumber(item: Beehive?){
 @BindingAdapter("Nosema")
 fun Switch.setNosemaValue(item: Beehive?){
     item?.let {
-        isChecked = item.noszema==1
+        isChecked = item.nosema==1
     }
 }
 
 @BindingAdapter("AscosphaeraApis")
-fun Switch.setMeszesValue(item: Beehive?){
+fun Switch.setAscosphaeraApis(item: Beehive?){
     item?.let {
         isChecked = item.AscosphaeraApis==10
+    }
+}
+
+@BindingAdapter("SwarmQueenCells")
+fun Switch.setSwarmQueenCellsValue(item: Beehive?){
+    item?.let {
+        isChecked = item.swarmingQueenCells==1
     }
 }
 

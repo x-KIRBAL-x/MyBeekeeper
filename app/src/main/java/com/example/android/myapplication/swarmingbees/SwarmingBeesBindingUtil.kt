@@ -1,5 +1,6 @@
 package com.example.android.myapplication.swarmingbees
 
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -32,5 +33,20 @@ fun TextView.setBroodframeNumber(item: Beehive?){
 fun ImageView.setBeeImage(item: Beehive?){
     item?.let {
         setImageResource(R.drawable.hive)
+    }
+}
+
+@BindingAdapter("SwarmingBeesChecktext")
+fun TextView.setSwarmingCheckBoxText(item: Beehive?){
+    item?.let {
+        text = "Swarm queen cells?"
+    }
+}
+
+@BindingAdapter("SwarmingBeesCheck")
+fun CheckBox.setCheckBox(item: Beehive?){
+    item?.let {
+        isChecked = item.swarmingQueenCells==1
+        isClickable = false
     }
 }

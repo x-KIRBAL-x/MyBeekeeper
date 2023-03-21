@@ -13,7 +13,7 @@ class BeeStatisticsViewModel(
     val database = dataSource
 
     fun getCountBadPop(index: Int): Int{
-        val count: Int? = database.getAllBadPopulationBee(groupKey, index)
+        val count: Int? = database.getAllBadPopulationBeehives(groupKey, index)
         return if(count==null){
             0
         } else{
@@ -47,4 +47,23 @@ class BeeStatisticsViewModel(
             count
         }
     }
+
+    fun getAllSickHive(): Int{
+        val count: Int? = database.getCountSicksBees(groupKey)
+        return if(count==null){
+            0
+        } else{
+            count
+        }
+    }
+
+    fun getAllSwarmingBeeHives(): Int{
+        val count: Int? = database.getCountSwarmingBees(groupKey, SimpleDateFormat("yyyy").format(Date()).toString().toLong() - 2)
+        return if(count==null){
+            0
+        } else{
+            count
+        }
+    }
+
 }

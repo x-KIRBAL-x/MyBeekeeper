@@ -4,6 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.android.myapplication.database.BeeDatabaseDao
+import java.text.SimpleDateFormat
+import java.util.*
 
 class SwarmingBeesViewModel(
     private val groupKey: Long,
@@ -11,7 +13,8 @@ class SwarmingBeesViewModel(
 
     val database = dataSource
 
-    val beehives = database.getSwarmingBees(groupKey)
+    val beehives = database.getSwarmingBees(groupKey,
+        SimpleDateFormat("yyyy").format(Date()).toString().toLong() - 2)
 
     private val _navigateToBeeReviewFragment = MutableLiveData<Long>()
     private val _navigateToSwarmingBeesDescriptionFragment = MutableLiveData<Boolean?>()

@@ -25,7 +25,7 @@ fun TextView.setBeehiveNameListItem(item: Beehive?){
 @BindingAdapter("BeeGroupName")
 fun TextView.setBeeGroupName(item: BeeGroup?){
     item?.let {
-        text = resources.getString(R.string.group_name) + item.groupNev
+        text = resources.getString(R.string.group_name) + item.groupName
         setTypeface(null,Typeface.BOLD)
     }
 }

@@ -29,6 +29,7 @@ class BeehivesViewModel(private val beeGroupKey: Long = 0L,
         beegroup = database.getGroupWithId(beeGroupKey)
     }
 
+
     fun getBeeGroup() = beegroup
 
     val navigateToBeeGroupsFragment: LiveData<Boolean?>

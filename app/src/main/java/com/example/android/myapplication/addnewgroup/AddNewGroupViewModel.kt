@@ -35,11 +35,11 @@ class AddNewGroupViewModel(dataSource: BeeDatabaseDao,
         _clickDoneButton.value=navi.toInt()
     }
 
-    fun setvalue(nev: String, hely: String){
+    fun setvalue(newName: String, newLocation: String){
         viewModelScope.launch {
             val newgroup = database.getgroup(groupKey)
-            newgroup.groupNev = nev
-            newgroup.groupLocation = hely
+            newgroup.groupName = newName
+            newgroup.groupLocation = newLocation
             database.updateGroup(newgroup)
         }
     }

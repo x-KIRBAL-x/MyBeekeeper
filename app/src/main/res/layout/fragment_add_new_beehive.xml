@@ -29,6 +29,7 @@
             android:id="@+id/new_beehive_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:maxLength="7"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,6 +51,7 @@
                 android:id="@+id/queenbee_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:inputType="number"
                 android:maxLength="5"/>
         </com.google.android.material.textfield.TextInputLayout>

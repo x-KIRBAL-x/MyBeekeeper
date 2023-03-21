@@ -63,6 +63,8 @@ class BeeStatisticsFragment: Fragment() {
         queenBeeAgeBarChart(queenBeeAge)
         binding.requiredQueenbee.text = beeStatisticsViewModel.getAllBadQueenbee().toString()
         binding.sumHive.text = beeStatisticsViewModel.getAllHive().toString()
+        binding.sicksBeehive.text = beeStatisticsViewModel.getAllSickHive().toString()
+        binding.swarmingBeehive.text = beeStatisticsViewModel.getAllSwarmingBeeHives().toString()
 
         return binding.root
     }

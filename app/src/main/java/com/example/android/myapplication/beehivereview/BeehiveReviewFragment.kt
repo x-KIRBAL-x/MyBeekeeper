@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import android.widget.Toast
-import androidx.core.view.get
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -44,12 +43,15 @@ class BeehiveReviewFragment: Fragment() {
                     var bfn: Int
                     var hfn: Int
                     var queenbeeYear: Int
-                    var noszema: Int = 0
+                    var nosema: Int = 0
                     var ascosphaeraApis: Int = 0
+                    var swarmQueenCells: Int = 0
                     if (binding.nosemaSwitch.isChecked)
-                        noszema = 1
+                        nosema = 1
                     if (binding.ascosphaeraApisSwitch.isChecked)
                         ascosphaeraApis = 10
+                    if (binding.swarmQueenCellsSwitch.isChecked)
+                        swarmQueenCells = 1
                     if(binding.broodframeNumberEdit.text.toString() != ""){
                         bfn = binding.broodframeNumberEdit.text.toString().toInt()
                     }
@@ -73,7 +75,7 @@ class BeehiveReviewFragment: Fragment() {
                             beehiveReviewViewModel.doneReview(
                                 SimpleDateFormat("EEEE yyyy-MMM-dd").format(
                                     Date()
-                                ).toString(), bfn, hfn, noszema, ascosphaeraApis, queenbeeYear)
+                                ).toString(), bfn, hfn, nosema, ascosphaeraApis, swarmQueenCells, queenbeeYear)
                         if(it==0){
                             this.findNavController().navigate(
                                 BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToBeehiveDetailFragment(
@@ -112,7 +114,7 @@ class BeehiveReviewFragment: Fragment() {
 
         beehiveReviewViewModel.editBeequeenCondition.observe(this, Observer {
             if(it==true){
-                var popupmenu: PopupMenu = PopupMenu(application,binding.queenbeeConditionEdit)
+                var popupmenu: PopupMenu = PopupMenu(context,binding.queenbeeConditionEdit)
                 popupmenu.inflate(R.menu.popup_menu_queenbee_quality)
                 popupmenu.show()
                 popupmenu.setForceShowIcon(true)
@@ -132,7 +134,7 @@ class BeehiveReviewFragment: Fragment() {
         })
        beehiveReviewViewModel.editBeehivePopulation.observe(this, Observer {
             if(it==true){
-                var popupmenu: PopupMenu = PopupMenu(application,binding.hivePopulationEdit)
+                val popupmenu: PopupMenu = PopupMenu(context,binding.hivePopulationEdit)
                 popupmenu.inflate(R.menu.popup_menu_population_quality)
                 popupmenu.show()
                 popupmenu.setForceShowIcon(true)
@@ -152,7 +154,7 @@ class BeehiveReviewFragment: Fragment() {
 
         beehiveReviewViewModel.editBroodframeQuantity.observe(this, Observer {
             if(it==true){
-                var popupmenu: PopupMenu = PopupMenu(application,binding.broodframeEdit)
+                var popupmenu: PopupMenu = PopupMenu(context,binding.broodframeEdit)
                 popupmenu.menuInflater.inflate(R.menu.popup_menu_button_quantity,popupmenu.menu)
                 popupmenu.show()
                 popupmenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
@@ -169,7 +171,7 @@ class BeehiveReviewFragment: Fragment() {
 
         beehiveReviewViewModel.editHoneyframeQuantity.observe(this, Observer {
             if(it==true){
-                var popupmenu: PopupMenu = PopupMenu(application,binding.honeyFrameEdit)
+                var popupmenu: PopupMenu = PopupMenu(context,binding.honeyFrameEdit)
                 popupmenu.menuInflater.inflate(R.menu.popup_menu_button_quantity,popupmenu.menu)
                 popupmenu.show()
                 popupmenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
@@ -195,6 +197,13 @@ class BeehiveReviewFragment: Fragment() {
             if(it==true){
                 this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToAscosphaeraApisFragment())
                 beehiveReviewViewModel.doneNavigateToAscosphaeraApisDescriptionFragment()
+            }
+        })
+
+        beehiveReviewViewModel.navigateToSwarnQuennCellsdescriptionFragment.observe(this, Observer {
+            if (it==true){
+                this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToSwarmQueenCellsDescriptionFragment())
+                beehiveReviewViewModel.doneNavigateToSwarnQuennCellsdescriptionFragment()
             }
         })
 

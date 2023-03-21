@@ -43,10 +43,13 @@ data class Beehive(
     var honeyFrame: Int = 2,
 
     @ColumnInfo(name = "nosema")
-    var noszema: Int = 0,
+    var nosema: Int = 0,
 
     @ColumnInfo(name = "ascosphaera_apis")
     var AscosphaeraApis: Int = 0,
+
+    @ColumnInfo(name = "swarming_queen_cells")
+    var swarmingQueenCells: Int = 0,
 
     @ColumnInfo(name = "group_id")
     var groupId: Long = 0L
