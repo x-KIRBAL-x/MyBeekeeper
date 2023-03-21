@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 class AddNewBeehiveViewModel(
     private val beeGroupKey: Long,
     private val beehiveKey: Long,
+    private val navi: Long,
     dataSource: BeeDatabaseDao) : ViewModel() {
 
 
@@ -24,13 +25,13 @@ class AddNewBeehiveViewModel(
 
     fun getBeehive() = beehive
 
-    private val _clickDoneButton = MutableLiveData<Boolean?>()
+    private val _clickDoneButton = MutableLiveData<Int?>()
 
-    val clickDoneButton: LiveData<Boolean?>
+    val clickDoneButton: LiveData<Int?>
         get() = _clickDoneButton
 
     fun clickDoneButton(){
-        _clickDoneButton.value = true
+        _clickDoneButton.value = navi.toInt()
     }
 
     fun donenavigating(){
@@ -39,13 +40,22 @@ class AddNewBeehiveViewModel(
 
     fun setValue(name: String, queenyear: Int){
         viewModelScope.launch {
-            var newBeeHive = database.getBeeHive(beehiveKey)
-            var beegroup = database.getgroup(beeGroupKey)
+            val newBeeHive = database.getBeeHive(beehiveKey)
+            val beegroup = database.getgroup(beeGroupKey)
             newBeeHive.beehiveName = name
             newBeeHive.queenBeeYear = queenyear
             newBeeHive.groupId = beeGroupKey
-            newBeeHive.groupName = beegroup.groupName
+            newBeeHive.groupName = beegroup.groupNev
             database.updateHive(newBeeHive)
+        }
+    }
+
+    fun updateBeehive(newName: String, queenyear: Int){
+        viewModelScope.launch {
+            val newBeehive = beehive.value ?: return@launch
+            newBeehive.beehiveName = newName
+            newBeehive.queenBeeYear = queenyear
+            database.updateHive(newBeehive)
         }
     }
 }

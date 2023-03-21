@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.MyBeekeeper" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!--Primary brand color.-->
+        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/orange_500</item>
         <item name="colorPrimaryVariant">@color/red_700</item>
         <item name="colorOnPrimary">@color/dark_red_900</item>
@@ -12,8 +12,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:textColor">@color/dark_brown</item>
-        <item name="android:color">@color/brown</item>
-        <item name="android:windowBackground">@color/brown</item>
+        <item name="android:textColor">@color/brown</item>
     </style>
 </resources>

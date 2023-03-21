@@ -20,7 +20,7 @@
             android:textAlignment="center"
             android:textSize="@dimen/text_size_20"
             app:layout_constraintBottom_toTopOf="@id/beehive_last_review"
-            app:layout_constraintEnd_toStartOf="@id/beehive_renane"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:BeehiveName="@{beehiveDetailViewModel.beehive}"/>
@@ -120,12 +120,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="12dp"
-            android:background="@drawable/roundcorner"
             android:onClick="@{()->beehiveDetailViewModel.clickOnEditButton()}"
             android:src="@drawable/edit_icon"
-            app:layout_constraintBottom_toBottomOf="@id/beehive_name"
+            android:backgroundTint="@color/orange_500"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/beehive_name" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/beehive_delete"

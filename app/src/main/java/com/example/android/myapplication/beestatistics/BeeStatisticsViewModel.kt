@@ -13,7 +13,7 @@ class BeeStatisticsViewModel(
     val database = dataSource
 
     fun getCountBadPop(index: Int): Int{
-        val count: Int? = database.getAllBadPopulationBeehives(groupKey, index)
+        val count: Int? = database.getAllBadPopulationBee(groupKey, index)
         return if(count==null){
             0
         } else{

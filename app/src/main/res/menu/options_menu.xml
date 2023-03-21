@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/beeKeeperMenuFragment"
-        android:icon="@drawable/home"
-        android:title="@string/menu_text" />
+
     <item
         android:id="@+id/beeGroupsFragment"
         android:icon="@drawable/bee_menu_icon"
-        android:title="@string/bee_groups_text" />
+        android:title="Bee Groups" />
     <item
-        android:id="@+id/selectGroupFragment"
+        android:id="@+id/beeKeeperMenuFragment"
         android:icon="@drawable/bee_menu_icon"
-        android:title="@string/bee_groups_management_text" />
+        android:title="Menu" />
     <item
         android:id="@+id/aboutFragment"
-        android:icon="@drawable/about_icon"
-        android:title="@string/info_text" />
+        android:title="Info" />
 </menu>

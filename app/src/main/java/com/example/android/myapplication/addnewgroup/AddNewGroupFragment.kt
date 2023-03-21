@@ -43,53 +43,36 @@ class AddNewGroupFragment : Fragment() {
 
         addNewGroupViewModel.clickDoneButton.observe(this, Observer {
             if (it!=null) {
-                        if( binding.newGroupName.text.toString() != "" && binding.newGroupLocation.text.toString() != ""){
-                            val groupNameLenght: Int = binding.newGroupName.text.toString().length
-                            val groupLocationLenght: Int = binding.newGroupLocation.text.toString().length
-                            if (groupNameLenght<12) {
-                                if (groupLocationLenght<21) {
-                                    if (it == 1) {
-                                        addNewGroupViewModel.setvalue(
-                                            binding.newGroupName.text.toString(),
-                                            binding.newGroupLocation.text.toString()
-                                        )
-                                        this.findNavController()
-                                            .navigate(AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeeGroupsFragment())
-                                        addNewGroupViewModel.doneNavigatingToGroupsFragment()
-                                    }
-                                    if (it == 2) {
-                                        addNewGroupViewModel.setvalue(
-                                            binding.newGroupName.text.toString(),
-                                            binding.newGroupLocation.text.toString()
-                                        )
-                                        this.findNavController().navigate(
-                                            AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeehivesFragment(
-                                                arguments.groupKey
-                                            )
-                                        )
-                                        addNewGroupViewModel.doneNavigatingToGroupsFragment()
-                                    }
-                                }
-                                else{
-                                    Toast.makeText(application,resources.getString(R.string.group_location_lenght_warrning),Toast.LENGTH_SHORT).show()
-                                }
+                        if( binding.newGroupName.text.toString().isNotEmpty() && binding.newGroupLocation.text.toString().isNotEmpty()){
+                            if(it==1) {
+                                addNewGroupViewModel.setvalue(
+                                    binding.newGroupName.text.toString(),
+                                    binding.newGroupLocation.text.toString()
+                                )
+                                this.findNavController()
+                                    .navigate(AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeeGroupsFragment())
+                                addNewGroupViewModel.doneNavigatingToGroupsFragment()
                             }
-                            else{
-                                Toast.makeText(application,resources.getString(R.string.group_name_lenght_warrning),Toast.LENGTH_SHORT).show()
+                            if (it==2){
+                                addNewGroupViewModel.setvalue(
+                                    binding.newGroupName.text.toString(),
+                                    binding.newGroupLocation.text.toString())
+                                this.findNavController().navigate(AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeehivesFragment(arguments.groupKey))
+                                addNewGroupViewModel.doneNavigatingToGroupsFragment()
                             }
                     }
                     else{
-                        Toast.makeText(application,resources.getString(R.string.empty_field_warrning),Toast.LENGTH_SHORT).show()
+                        Toast.makeText(application,"Please fill in all fields!",Toast.LENGTH_SHORT).show()
                     }
 
             }
         })
 
         binding.newGroupName.doOnTextChanged { text, start, before, count ->
-            if (text!!.length > 11){
+            if (text!!.length > 10){
                 binding.beegroupnamelayout.error = "No More!"
             }
-            else if (text.length <= 11){
+            else if (text.length <= 10){
                 binding.beegroupnamelayout.error = null
             }
         }
