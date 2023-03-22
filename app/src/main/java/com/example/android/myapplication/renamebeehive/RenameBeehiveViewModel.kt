@@ -37,7 +37,7 @@ class RenameBeehiveViewModel(
 
    fun setNewName(newBeehiveName: String){
         viewModelScope.launch {
-            val updateBeehive = database.getBeeHive(beehiveKey)
+            val updateBeehive = beehive.value ?: return@launch
             updateBeehive.beehiveName = newBeehiveName
             database.updateHive(updateBeehive)
         }

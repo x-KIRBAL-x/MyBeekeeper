@@ -14,5 +14,5 @@ data class BeeGroup(
     var groupName: String = "",
 
     @ColumnInfo(name = "group_location")
-    var groupLocation: String = "-"
+    var groupLocation: String = ""
 )

@@ -13,7 +13,7 @@ data class Beehive(
     var groupName: String = "-",
 
     @ColumnInfo(name = "beehive_name")
-    var beehiveName: String = "-",
+    var beehiveName: String = "",
 
     @ColumnInfo(name = "queen_bee_age")
     var queenBeeAge: Int = 0,
