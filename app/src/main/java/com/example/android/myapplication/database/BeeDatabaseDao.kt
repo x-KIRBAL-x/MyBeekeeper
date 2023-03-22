@@ -60,7 +60,7 @@ interface BeeDatabaseDao {
     @Query("SELECT * FROM (SELECT * FROM beehive_table WHERE group_id = :key) WHERE queen_bee_year < :year OR queen_bee_state<3 ORDER BY beehive_name")
     fun getBadQueenBees(key: Long, year: Long): LiveData<List<Beehive>>
 
-    @Query("SELECT * FROM bee_group_table WHERE NOT group_name = '' ORDER BY groupId DESC")
+    @Query("SELECT * FROM bee_group_table WHERE NOT group_name = '' ORDER BY group_name ASC")
     fun getAllGroups(): LiveData<List<BeeGroup>>
 
     @Query("SELECT * FROM (SELECT * FROM beehive_table WHERE group_id = :key) WHERE  nosema=1 OR ascosphaera_apis=10 ORDER BY beehive_name")
