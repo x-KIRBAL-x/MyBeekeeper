@@ -64,7 +64,6 @@ class BeehiveDetailFragment : Fragment() {
 
         beehiveDetailViewModel.navigateToRenameBeehiveFragment.observe(this, Observer {
             if (it==true){
-                //Toast.makeText(context,"${arguments.beehivekey} ${arguments.beeGroupKey}",Toast.LENGTH_SHORT).show()
                this.findNavController().navigate(BeehiveDetailFragmentDirections.actionBeehiveDetailFragmentToRenameBeehiveFragment(arguments.beehivekey, arguments.beeGroupKey))
                beehiveDetailViewModel.doneNavigateToRenameBeehiveFragment()
             }

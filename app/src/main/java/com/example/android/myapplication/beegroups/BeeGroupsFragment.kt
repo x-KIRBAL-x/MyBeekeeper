@@ -39,7 +39,6 @@ class BeeGroupsFragment : Fragment() {
         binding.beeGroupsViewModel = beeGroupsViewModel
 
         val adapter = BeeGroupsAdapter(BeeGroupListener { groupId ->
-           // Toast.makeText(context, "${groupId}", Toast.LENGTH_SHORT).show()
             beeGroupsViewModel.onBeeGroupsClicked(groupId)
         })
         binding.beegroupsList.adapter = adapter

@@ -36,12 +36,12 @@
     <string name="no_button"><b>No</b></string>
 
     <string name="queenbee_year_text"><b>Quennbee year: </b></string>
-    <string name="quennbee_condition_text">Queenbee condition: </string>
-    <string name="beehive_population_text">Beehive Population: </string>
-    <string name="broodframe_quantity_text">Broodframe quantity: </string>
-    <string name="broodframe_number_text"><b>Broodframe number: </b></string>
-    <string name="honeyframe_quantity_text">Honeyframe quantity: </string>
-    <string name="honeyframe_number_text"><b>Honeyframe number: </b></string>
+    <string name="quennbee_condition_text">Queenbee condition:\ </string>
+    <string name="beehive_population_text">Beehive Population:\ </string>
+    <string name="broodframe_quantity_text">Broodframe quantity:\ </string>
+    <string name="broodframe_number_text"><b>Broodframe number:\ </b></string>
+    <string name="honeyframe_quantity_text">Honeyframe quantity:\ </string>
+    <string name="honeyframe_number_text"><b>Honeyframe number:\ </b></string>
 
     <string name="queenbee_management_button"><b>Queenbee \n management</b></string>
     <string name="broodframe_balance_button"><b>Broodframe \n balancing</b></string>
@@ -112,4 +112,13 @@
     <string name="bee_groups_text">Bee Groups</string>
     <string name="bee_groups_management_text">Bee Groups Management</string>
     <string name="info_text">About</string>
+    <string name="about_description">description</string>
+    <string name="info_button_text">\?</string>
+    <string name="stat_piechart_title">BeeHive Population</string>
+    <string name="stat_barchart_title">QeenBee Age</string>
+    <string name="stat_hive_total_text">Hive (Total):</string>
+    <string name="stat_bad_queenbee_text">Bad queenbee:</string>
+    <string name="stat_sicks_beehives_text">Sicks Beehives:</string>
+    <string name="stat_swarming_beehives_text">Swarming Beehives:</string>
+    <string name="produced_by_text">Produced by Balázs Király</string>
 </resources>

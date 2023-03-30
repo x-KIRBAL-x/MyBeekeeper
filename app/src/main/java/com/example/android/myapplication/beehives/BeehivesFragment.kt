@@ -37,7 +37,6 @@ class BeehivesFragment : Fragment() {
         binding.beehivesViewModel = beeHivesViewModel
 
         val adapter = BeehivesAdapter(BeehiveListener { beehivesId ->
-           // Toast.makeText(context,"${beehivesId}",Toast.LENGTH_SHORT).show()
             beeHivesViewModel.onBeehiveClicked(beehivesId)
         })
         binding.beehivesList.adapter = adapter
