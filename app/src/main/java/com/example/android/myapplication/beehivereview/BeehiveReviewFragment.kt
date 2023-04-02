@@ -1,6 +1,7 @@
 package com.example.android.myapplication.beehivereview
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -116,8 +117,6 @@ class BeehiveReviewFragment: Fragment() {
             if(it==true){
                 var popupmenu: PopupMenu = PopupMenu(context,binding.queenbeeConditionEdit)
                 popupmenu.inflate(R.menu.popup_menu_queenbee_quality)
-                popupmenu.show()
-                popupmenu.setForceShowIcon(true)
                 popupmenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
                     when(item.itemId) {
                         R.id.popUpMenuQuality_Zero -> beehiveReviewViewModel.setBeequeenCondition(0)
@@ -129,6 +128,18 @@ class BeehiveReviewFragment: Fragment() {
                     }
                     true
                 })
+                try {
+                    val fieldMPopup = PopupMenu::class.java.getDeclaredField("mPopup")
+                    fieldMPopup.isAccessible = true
+                    val mPopup = fieldMPopup.get(popupmenu)
+                    mPopup.javaClass
+                        .getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+                        .invoke(mPopup, true)
+                } catch (e: Exception){
+                    Log.e("Main", "Error showing menu icons.", e)
+                } finally {
+                    popupmenu.show()
+                }
                 beehiveReviewViewModel.doneEditBeequennCondition()
             }
         })
@@ -136,8 +147,6 @@ class BeehiveReviewFragment: Fragment() {
             if(it==true){
                 val popupmenu: PopupMenu = PopupMenu(context,binding.hivePopulationEdit)
                 popupmenu.inflate(R.menu.popup_menu_population_quality)
-                popupmenu.show()
-                popupmenu.setForceShowIcon(true)
                 popupmenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
                     when(item.itemId) {
                         R.id.popUpMenuQuality_One -> beehiveReviewViewModel.setBeehivePopulation(1)
@@ -148,6 +157,18 @@ class BeehiveReviewFragment: Fragment() {
                     }
                     true
                 })
+                try {
+                    val fieldMPopup = PopupMenu::class.java.getDeclaredField("mPopup")
+                    fieldMPopup.isAccessible = true
+                    val mPopup = fieldMPopup.get(popupmenu)
+                    mPopup.javaClass
+                        .getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+                        .invoke(mPopup, true)
+                } catch (e: Exception){
+                    Log.e("Main", "Error showing menu icons.", e)
+                } finally {
+                    popupmenu.show()
+                }
                 beehiveReviewViewModel.doneEditBeehivePopulation()
             }
         })

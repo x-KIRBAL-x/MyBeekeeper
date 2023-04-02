@@ -103,11 +103,50 @@
 
         <a href="https://www.hgsc.bcm.edu/sites/default/files/images/review_Chalkb.pdf">Michael Hornitzky. 2001. Literature review of chalkbrood?a fungal disease
             of honeybees.(Rural Industries Research and Development Corporation).</a></string>
-    <string name="queenbee_man_info">description</string>
-    <string name="brood_frame_info">description</string>
-    <string name="honey_frame_info">description</string>
-    <string name="swarming_bees_info">description</string>
-    <string name="swarm_queen_cells_info">description to swarm queen cells</string>
+    <string name="queenbee_man_info">This list shows hives where the queen bee is older than 2 years or in less than average condition.</string>
+    <string name="brood_frame_info">The list includes hives with more or bee brood frames than required.</string>
+    <string name="honey_frame_info">The list includes hives with more or less honey frames than required.</string>
+    <string name="swarming_bees_info">This list shows colonies where the number of bee brood frames and the population are strong enough to swarm or whereswarming
+        cells have been found during treatment.</string>
+    <string name="swarm_queen_cells_info">
+        <b>What is a Cell?</b> \n \n
+        To understand the difference between a supersedure cell and a swarm cell, it is helpful to understand the terms and the function these cells serve in the hive.
+        In its most general form, the term “cell” is used to describe any type of closed space created from wax by bees. Using this basic definition, a comb is simply
+        a series of interconnected cells that are used to store honey and pollen and to protect developing brood.
+        \n \n
+        <b>Why Do Bees Make Queen Cells?</b> \n \n
+        However, when beekeepers talk about cells, they are typically referring to queen cells. As the name implies, queen cells are where larva develop and mature into
+        new queens. They are typically around one inch long, have rough surface texture, and are shaped like a peanut shell. Colonies usually produce new queens for one
+        of two distinct reasons.
+        \n \n
+        In the first case, the existing queen is not producing enough brood to keep the colony viable. This can happen when the queen is aging or ill, has run out of genetic
+        material needed to fertilize her eggs, or has died. To keep up the colony numbers, the bees produce a new queen to take over the responsibility of laying eggs.
+        \n \n
+        In the second case, the bees have determined that the colony is too large for their current hive. In this situation, a portion of the bees will prepare to leave
+        the hive with the existing queen. Together, they search for a new location in a migration known as swarming.
+        \n \n
+        <b>What is a Supersedure Cell?</b> \n \n
+        When a colony is raising a new queen to replace the aging, ill or missing queen, they produce supersedure cells. The new queen that emerges from the cell will take
+        over from, or supersede, the old queen. To boost the odds of producing a healthy new queen, the colony creates several supersedure cells at the same time. In most
+        cases, the first one to emerge will become the new queen.
+        \n \n
+        Beekeepers usually find supersedure cells on the comb face, extending out from the surface and hanging downwards. With most varieties of honey bees, the colony
+        will produce between one and three supersedure cells at one time.
+        \n \n
+        <b>What is a Swarm Cell?</b> \n \n
+        By contrast, swarm cells produce a new queen to take the place of the one preparing to leave the hive. Typically, the bees produce many swarm cells and the strongest
+        of these new queens take over the production of new brood for the colony.
+        \n \n
+        Most beekeepers report seeing three or more swarm cells of variable age in their hives. Unlike supersedure cells, bees typically create swarm cells along the margins
+        of the comb when the colony is preparing to swarm.
+        \n \n
+        To recap, a swarm cell is when there is an overabundance of bees in the hive and they need to swarm to create more room. The old queen leaves with part of the hive
+        to find a new home. The new queen from the swarm cell stays to look over the rest of the hive. A supersedure cell is where the current queen is not doing her part in
+        the hive and therefore the hive creates a new queen to take, or supersede, her place.
+        \n \n
+        Don’t be surprised if you see more than one queen cell in a hive. For all queen cell types, bees can make up to ten to ensure a healthy queen is born.[1]
+        \n \n
+        [1]<a href="https://www.dadant.com/learn/identify-queen-cells/">https://www.dadant.com/learn/identify-queen-cells/</a></string>
     <string name="menu_text">Home</string>
     <string name="bee_groups_text">Bee Groups</string>
     <string name="bee_groups_management_text">Bee Groups Management</string>
