@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:background="@drawable/roundcorner"
-            android:onClick="@{() -> beehivesViewModel.navigateToAddNewGroupFragment()}"
+            android:onClick="@{() -> beehivesViewModel.navigateToRenameGroupFragment()}"
             android:src="@drawable/edit_icon"
             app:layout_constraintBottom_toTopOf="@id/beehives_list"
             app:layout_constraintStart_toStartOf="parent"

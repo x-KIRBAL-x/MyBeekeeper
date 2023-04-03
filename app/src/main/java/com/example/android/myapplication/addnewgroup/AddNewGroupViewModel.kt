@@ -9,8 +9,7 @@ import com.example.android.myapplication.database.BeeGroup
 import kotlinx.coroutines.launch
 
 class AddNewGroupViewModel(dataSource: BeeDatabaseDao,
-                           private val groupKey: Long,
-                           private val navi: Long) : ViewModel(){
+                           private val groupKey: Long) : ViewModel(){
 
     val database = dataSource
 
@@ -32,7 +31,7 @@ class AddNewGroupViewModel(dataSource: BeeDatabaseDao,
     }
 
     fun clickDoneButton(){
-        _clickDoneButton.value=navi.toInt()
+        _clickDoneButton.value=1
     }
 
     fun setvalue(newName: String, newLocation: String){

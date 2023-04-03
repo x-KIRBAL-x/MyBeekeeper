@@ -50,15 +50,30 @@
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
+        android:id="@+id/rename_beegroup"
+        android:name="com.example.android.myapplication.renamebeegroup.RenameBeeGroupFragment"
+        android:label="Rename BeeGroup"
+        tools:layout="@layout/fragment_rename_beegroup">
+        <argument
+            android:name="groupKey"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_rename_beegroup_to_beehivesFragment"
+            app:destination="@id/beehivesFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/beehivesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
         android:id="@+id/addNewGroupFragment"
         android:name="com.example.android.myapplication.addnewgroup.AddNewGroupFragment"
         android:label="Add new group"
         tools:layout="@layout/fragment_add_new_group">
         <argument
             android:name="groupKey"
-            app:argType="long"/>
-        <argument
-            android:name="navi"
             app:argType="long"/>
         <action
             android:id="@+id/action_addNewGroupFragment_to_beeGroupsFragment"
@@ -69,16 +84,6 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/beeGroupsFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_addNewGroupFragment_to_beehivesFragment"
-            app:destination="@id/beehivesFragment"
-            app:enterAnim="@anim/slide_in_down"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:launchSingleTop="true"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/nav_default_exit_anim"
-            app:popUpTo="@id/beehivesFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -136,8 +141,8 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left" />
         <action
-            android:id="@+id/action_beehivesFragment_to_addNewGroupFragment"
-            app:destination="@id/addNewGroupFragment"
+            android:id="@+id/action_beehivesFragment_to_rename_beegroup"
+            app:destination="@id/rename_beegroup"
             app:enterAnim="@anim/slide_in_top"
             app:popEnterAnim="@anim/slide_in_down" />
     </fragment>

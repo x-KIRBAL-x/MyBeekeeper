@@ -78,10 +78,10 @@ class BeehivesFragment : Fragment() {
         }
         })
 
-        beeHivesViewModel.navigateToAddNewGroupFragment.observe(this, Observer {
+        beeHivesViewModel.navigateToRenameGroupFragment.observe(this, Observer {
             if (it==true){
-                this.findNavController().navigate(BeehivesFragmentDirections.actionBeehivesFragmentToAddNewGroupFragment(arguments.beeGroupKey, 2))
-                beeHivesViewModel.doneNavigateToAddNewGroupFragment()
+                this.findNavController().navigate(BeehivesFragmentDirections.actionBeehivesFragmentToRenameBeegroup(arguments.beeGroupKey))
+                beeHivesViewModel.doneNavigateToRenameGroupFragment()
             }
         })
 

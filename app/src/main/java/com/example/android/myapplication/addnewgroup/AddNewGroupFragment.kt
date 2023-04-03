@@ -31,7 +31,7 @@ class AddNewGroupFragment : Fragment() {
         val arguments = AddNewGroupFragmentArgs.fromBundle(requireArguments())
 
         val dataSource = BeeDatabase.getInstance(application).beeDatabaseDao
-        val viewModelFactory = AddNewGroupViewModelFactory(dataSource,arguments.groupKey,arguments.navi)
+        val viewModelFactory = AddNewGroupViewModelFactory(dataSource,arguments.groupKey)
 
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
@@ -55,18 +55,6 @@ class AddNewGroupFragment : Fragment() {
                                         )
                                         this.findNavController()
                                             .navigate(AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeeGroupsFragment())
-                                        addNewGroupViewModel.doneNavigatingToGroupsFragment()
-                                    }
-                                    if (it == 2) {
-                                        addNewGroupViewModel.setvalue(
-                                            binding.newGroupName.text.toString(),
-                                            binding.newGroupLocation.text.toString()
-                                        )
-                                        this.findNavController().navigate(
-                                            AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeehivesFragment(
-                                                arguments.groupKey
-                                            )
-                                        )
                                         addNewGroupViewModel.doneNavigatingToGroupsFragment()
                                     }
                                 }

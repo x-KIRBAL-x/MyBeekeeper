@@ -13,8 +13,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-200" />
+                            <option name="y" value="938" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -53,11 +53,6 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_addNewGroupFragment_to_beeGroupsFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_addNewGroupFragment_to_beehivesFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -352,11 +347,6 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_beehivesFragment_to_addNewGroupFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                             <entry key="action_beehivesFragment_to_beeGroupsFragment">
                               <value>
                                 <LayoutPositions />
@@ -368,6 +358,11 @@
                               </value>
                             </entry>
                             <entry key="action_beehivesFragment_to_groupDeleteFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_beehivesFragment_to_rename_beegroup">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -561,6 +556,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="rename_beegroup">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="212" />
+                            <option name="y" value="1168" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
