@@ -12,14 +12,15 @@ class BeeStatisticsViewModel(
 
     val database = dataSource
 
-    fun getCountBadPop(index: Int): Int{
-        val count: Int? = database.getAllBadPopulationBeehives(groupKey, index)
+    fun getCountPopulation(index: Int): Int{
+        val count: Int? = database.getCountPopulationBeehives(groupKey, index)
         return if(count==null){
             0
         } else{
             count
         }
     }
+
     fun getQueenBeeYear(index: Int): Int{
         val count: Int? = database.getCountQueenBeeAge(groupKey,
             SimpleDateFormat("yyyy").format(Date()).toString().toInt()-index)

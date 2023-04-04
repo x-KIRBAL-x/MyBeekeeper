@@ -109,7 +109,7 @@
             app:layout_constraintTop_toBottomOf="@id/all_hive"
             app:layout_constraintBottom_toTopOf="@id/sicks_beehives">
         <TextView
-            android:id="@+id/required_qeenbee_text"
+            android:id="@+id/bad_qeenbee_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stat_bad_queenbee_text"
@@ -120,7 +120,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
         <TextView
-            android:id="@+id/required_queenbee"
+            android:id="@+id/bad_queenbee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/list_item_text_size"

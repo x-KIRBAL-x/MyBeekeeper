@@ -48,20 +48,20 @@ class BeeStatisticsFragment: Fragment() {
         val queenBeeAge = Array<Int>(6){0}
 
         for (i in 1..5) {
-            population[i-1] = beeStatisticsViewModel.getCountBadPop(i)
+            population[i-1] = beeStatisticsViewModel.getCountPopulation(i)
         }
         for (i in 0..5){
             queenBeeAge[i] = beeStatisticsViewModel.getQueenBeeYear(i)
         }
-        populationname[0] = "Very Bad"
-        populationname[1] = "Bad"
-        populationname[2] = "Medium"
-        populationname[3] = "Good"
-        populationname[4] = "Very Good"
+        populationname[0] = resources.getString(R.string.one)
+        populationname[1] = resources.getString(R.string.two)
+        populationname[2] = resources.getString(R.string.three)
+        populationname[3] = resources.getString(R.string.four)
+        populationname[4] = resources.getString(R.string.five)
 
         populatePieChart(population,populationname)
         queenBeeAgeBarChart(queenBeeAge)
-        binding.requiredQueenbee.text = beeStatisticsViewModel.getAllBadQueenbee().toString()
+        binding.badQueenbee.text = beeStatisticsViewModel.getAllBadQueenbee().toString()
         binding.sumHive.text = beeStatisticsViewModel.getAllHive().toString()
         binding.sicksBeehive.text = beeStatisticsViewModel.getAllSickHive().toString()
         binding.swarmingBeehive.text = beeStatisticsViewModel.getAllSwarmingBeeHives().toString()

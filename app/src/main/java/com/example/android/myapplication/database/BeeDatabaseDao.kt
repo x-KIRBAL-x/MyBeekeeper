@@ -66,8 +66,8 @@ interface BeeDatabaseDao {
     @Query("SELECT * FROM (SELECT * FROM beehive_table WHERE group_id = :key) WHERE  nosema=1 OR ascosphaera_apis=10 ORDER BY beehive_name")
     fun getAllSickBeehives(key: Long): LiveData<List<Beehive>>
 
-    @Query("SELECT COUNT(*) FROM beehive_table WHERE group_id=:groupkey AND beehive_population=:number ORDER BY beehive_name")
-    fun getAllBadPopulationBeehives(groupkey: Long, number: Int): Int?
+    @Query("SELECT COUNT(*) FROM beehive_table WHERE group_id=:groupkey AND beehive_population=:number")
+    fun getCountPopulationBeehives(groupkey: Long, number: Int): Int?
 
     @Query("SELECT COUNT(*) FROM beehive_table WHERE group_id=:groupkey AND queen_bee_year=:number")
     fun getCountQueenBeeAge(groupkey: Long,number: Int): Int?
