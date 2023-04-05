@@ -28,7 +28,7 @@ class AddNewBeehiveViewModel(
 
     val clickDoneButton: LiveData<Boolean?>
         get() = _clickDoneButton
-
+    
     fun clickDoneButton(){
         _clickDoneButton.value = true
     }
@@ -40,11 +40,9 @@ class AddNewBeehiveViewModel(
     fun setValue(name: String, queenyear: Int){
         viewModelScope.launch {
             var newBeeHive = database.getBeeHive(beehiveKey)
-            var beegroup = database.getgroup(beeGroupKey)
             newBeeHive.beehiveName = name
             newBeeHive.queenBeeYear = queenyear
             newBeeHive.groupId = beeGroupKey
-            newBeeHive.groupName = beegroup.groupName
             database.updateHive(newBeeHive)
         }
     }
