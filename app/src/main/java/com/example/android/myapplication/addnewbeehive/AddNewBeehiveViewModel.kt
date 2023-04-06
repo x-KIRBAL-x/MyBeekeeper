@@ -28,7 +28,7 @@ class AddNewBeehiveViewModel(
 
     val clickDoneButton: LiveData<Boolean?>
         get() = _clickDoneButton
-    
+
     fun clickDoneButton(){
         _clickDoneButton.value = true
     }
