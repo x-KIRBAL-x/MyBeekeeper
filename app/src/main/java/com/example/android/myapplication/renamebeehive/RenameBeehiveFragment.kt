@@ -63,10 +63,10 @@ class RenameBeehiveFragment : Fragment(){
             }
         })
         binding.renameBeehive.doOnTextChanged { text, start, before, count ->
-            if (text!!.length > 6){
+            if (text!!.length > 7){
                 binding.newBeehiveNameLayout.error = "No More!"
             }
-            else if (text.length <=6){
+            else if (text.length <=7){
                 binding.newBeehiveNameLayout.error = null
             }
         }

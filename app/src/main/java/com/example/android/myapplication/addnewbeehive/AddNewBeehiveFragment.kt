@@ -46,7 +46,7 @@ class AddNewBeehiveFragment : Fragment(){
                 if(binding.newBeehiveName.text.toString() != "" && binding.queenbeeAge.text.toString() != ""){
                     var queenYear: Int = binding.queenbeeAge.text.toString().toInt()
                     var maxLenght: Int = binding.newBeehiveName.text.toString().length
-                    if (maxLenght<7){
+                    if (maxLenght<12){
                          if(queenYear>(SimpleDateFormat("yyyy").format(Date()).toString().toInt()-6)
                          && queenYear<=SimpleDateFormat("yyyy").format(Date()).toString().toInt()){
                                  addNewBeehiveViewModel.setValue(binding.newBeehiveName.text.toString(),queenYear)
@@ -68,10 +68,10 @@ class AddNewBeehiveFragment : Fragment(){
         })
 
         binding.newBeehiveName.doOnTextChanged { text, start, before, count ->
-            if (text!!.length > 6){
+            if (text!!.length > 7){
                 binding.beenamelayout.error = "No More!"
             }
-            else if (text.length <=6){
+            else if (text.length <=7){
                 binding.beenamelayout.error = null
             }
         }

@@ -19,7 +19,7 @@
 
         <ImageView
             android:id="@+id/group_img"
-            android:layout_width="115dp"
+            android:layout_width="160dp"
             android:layout_height="64dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="8dp"
