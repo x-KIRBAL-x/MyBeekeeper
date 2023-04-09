@@ -43,7 +43,7 @@ class RenameBeehiveFragment : Fragment(){
                 var newName: String = binding.renameBeehive.text.toString()
                 var textLenght: Int = newName.length
                 if(newName!="") {
-                    if (textLenght<7) {
+                    if (textLenght<8) {
                         renameBeehiveViewModel.setNewName(newName)
                         this.findNavController().navigate(
                             RenameBeehiveFragmentDirections.actionRenameBeehiveFragmentToBeehiveDetailFragment(
